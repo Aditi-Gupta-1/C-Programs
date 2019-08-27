@@ -1,0 +1,49 @@
+QWESTION
+Given two arrays of integers output the smallest number in the
+first array not present in the second one.
+
+PROGRAM
+
+#include<stdio.h>
+int main()
+{int N1,N2,i,j,f=0;
+scanf("%d\n",&N1);
+ int a[N1];
+ for(i=0;i<N1;i++) //input first array
+ {
+   scanf("%d  ",&a[i]);
+ }
+scanf("\n%d",&N2);
+ int b[N2];
+ for(i=0;i<N2;i++)     //input second array
+ {
+   scanf("%d  ",&b[i]);
+ }
+ int min = 1000;
+ for(i=0;i<N1;i++)
+ {
+     f=0;
+     for(j=0;j<N2;j++)
+     {
+       if(a[i]==b[j])
+       {
+         f=f+1;
+         break;
+       }
+     } 
+   
+   if (a[i] <min)
+   {
+   if(f==0) 
+     min = a[i];
+   } 
+ }
+ 
+ if (min==1000)
+   printf("NO");
+ else
+   printf("%d",min);
+ 
+ return 0;
+ 
+}
