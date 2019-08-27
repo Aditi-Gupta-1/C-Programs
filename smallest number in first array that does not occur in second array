@@ -1,9 +1,16 @@
 QWESTION
 Given two arrays of integers output the smallest number in the
-first array not present in the second one.
+first array not present in the second one. If no such number is present print NO.
+
+EXAMPLE
+Input:
+3
+2 5 4
+4
+6 3 5 7
+Output: 2
 
 PROGRAM
-
 #include<stdio.h>
 int main()
 {int N1,N2,i,j,f=0;
